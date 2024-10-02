@@ -1,0 +1,14 @@
+LICENSE
+README.rst
+pyproject.toml
+setup.py
+django_ui_forms/__init__.py
+django_ui_forms/forms.py
+django_ui_forms/models.py
+django_ui_forms.egg-info/PKG-INFO
+django_ui_forms.egg-info/SOURCES.txt
+django_ui_forms.egg-info/dependency_links.txt
+django_ui_forms.egg-info/requires.txt
+django_ui_forms.egg-info/top_level.txt
+django_ui_forms/utils/__init__.py
+django_ui_forms/utils/constants.py

@@ -1,0 +1,38 @@
+{% for field in form.visible_fields %}
+{% if field.field.widget.input_type == 'radio' %}
+<fieldset class="mb-5 w-full">
+    <label for="{{ field.id_for_label }}" class="mb-3">{{field.label}}</label>
+    {% for choice in field.field.choices %}
+    <div class="flex items-center mb-3">
+        <input id="{{ field.id_for_label }}_{{ forloop.counter }}" type="radio" name="{{field.name}}"
+            value="{{choice.0}}" class="w-4 h-4 border-gray-300 focus:ring-2" checked>
+        <label for="{{ field.id_for_label }}_{{ forloop.counter }}" class="block ms-2  font-medium ">
+            {{ choice.1 }}
+        </label>
+    </div>
+    {% endfor %}
+</fieldset>
+
+{% elif field.field.widget.input_type == 'checkbox' %}
+<div class="flex items-center mb-4">
+    {{field}}
+    <label for="{{field.id_for_label}}" class="ms-2 font-medium">{{field.help_text}}</label>
+</div>
+{% elif field.field.widget.input_type == 'select' %}
+<div class="mb-5 w-full">
+    <label for="{{field.id_for_label}}" class="block mb-2 font-medium">{{field.label}}</label>
+    {{field}}
+</div>
+
+{% else %}
+<div class="relative z-0 w-full mb-5 group">
+    {{field}}
+    <label for="floating_email"
+        class="peer-focus:font-medium absolute duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">{{field.label}}</label>
+    {% if field.help_text %}
+    <p id="helper-text-explanation" class="mt-2 text-gray-500 dark:text-gray-400">{{field.help_text}}</a>.
+    </p>
+    {% endif %}
+</div>
+{% endif %}
+{% endfor %}
