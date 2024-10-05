@@ -1,0 +1,5 @@
+include README.md
+include LICENSE
+recursive-include django_ui_forms/static *
+recursive-include django_ui_forms/templates *
+recursive-include django_ui_forms/utils *

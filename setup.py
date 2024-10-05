@@ -2,11 +2,11 @@ from setuptools import setup, find_packages
 
 setup(
     name="django-ui-forms",
-    version="1.0",
+    version="1.1",
     description="A Django reusable app to extend forms with Bootstrap and Tailwind CSS support",
     long_description=open("README.md").read(),
     long_description_content_type="text/markdown",
-    author="Your Name",
+    author="Mohit Prajapat",
     author_email="mohitdevelopment2001@gmail.com",
     url="https://github.com/mohitprajapat2001/django-ui-forms",
     packages=find_packages(),

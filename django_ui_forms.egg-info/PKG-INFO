@@ -1,9 +1,9 @@
 Metadata-Version: 2.1
 Name: django-ui-forms
-Version: 1.0
+Version: 1.1
 Summary: A Django reusable app to extend forms with Bootstrap and Tailwind CSS support
 Home-page: https://github.com/mohitprajapat2001/django-ui-forms
-Author: Your Name
+Author: Mohit Prajapat
 Author-email: mohitdevelopment2001@gmail.com
 Classifier: Framework :: Django
 Classifier: Intended Audience :: Developers
@@ -20,6 +20,8 @@ License-File: LICENSE
 # Django UI Forms
 
 A Django reusable app to extend forms and provide UI with templates available for Bootstrap and Tailwind CSS.
+
+https://pypi.org/project/django-ui-forms/
 
 ## Features
 
